@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teacher{% endblock %}
+
+{% block body %}
+    <div>
+    <h2 style="text-align:center; color:black; margin-top:10px;"  class="animate__animated  animate__zoomInDown   animate__infinite animate-delay:16s animation-duration: 2s; ">Welcome to the University of Greenwich</h2>
+    </div>
+    <div id="slider">
+
+    
+
+        </div>
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-9">
+                <div class="container">
+                    <h1 style="margin-top:20px; margin-left:500px; color:black;">Teacher List</h1>
+                    <div style="margin-left:170px;" class="row row-cols-1 row-cols-md-4 g-4">
+                        {% for student in students %}
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body" style="background:#7300E9; color:white;">
+                                        <h5 class="card-title">{{ student.Name }}</h5>
+                                        <h6 class="card-title"> {{ student.Dob|date('d-m-Y') }}</h6>
+                                        <p >Gender: {{ student.Gender }}</p>
+                                        <p >Class: {{ student.Class.Name }}</p>
+                                        
+                                    </div>
+                                    <div class="card-footer" style="background:#FFF3D5;">       
+                                        <a href="{{ path('app_student_show', {'id': student.id}) }}"
+                                           class="btn btn-info">Show</a>
+                                        <a href="{{ path('app_student_edit', {'id': student.id}) }}"
+                                           class="btn btn-success">Edit</a>   
+                                    </div>   
+                                </div>
+                            </div>
+                        {% endfor %}
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a style="margin-top:50px; margin-left:500px;" href="{{ path('app_student_new') }}" class="btn btn-warning">Create new</a>
+    </div>
+    <a style="position: fixed;
+    
+
+    right: 50px;
+    bottom: 80px;" href="#" class="backtotop animate__animated animate__bounceIn animate__infinite">
+        <i style="color: while;
+    font-size: 2rem;
+    border: 2px solid #7300E9;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    
+    text-align: center;" class="fa fa-angle-up"></i>
+    </a>
+    
+
+   
+    <iframe style="margin-top:50px; margin-left:; width:100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.6772673846613!2d108.2333621750049!3d16.0822286845991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421827a3c439f5%3A0xdec2fb897aa16a90!2sGreenwich%20Vi%E1%BB%87t%20Nam!5e0!3m2!1sen!2s!4v1686711914656!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+
+
+
+     
+{% endblock %}

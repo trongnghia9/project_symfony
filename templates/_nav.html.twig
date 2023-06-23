@@ -1,0 +1,82 @@
+    
+    
+    
+    
+    
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+<style>
+  a::after {
+content: "";
+height: 1px;
+width: 100%;
+display: block;
+background-color: red;
+transition: all 1s;
+opacity:0;
+  }
+
+  
+ </style>
+ <style>
+  a:hover::after {
+content: "";
+height: 1px;
+width: 100%;
+display: block;
+background-color: black;
+transition: all 1s;
+opacity:1;
+  } 
+   i {
+    font-size: 20px;
+    color:white;
+    margin-right: 5px;
+   }
+  
+ </style>
+        
+    </head>
+
+    <body style=" background-color:#FFF3D5;">
+        <section style="background-color: #7300E9; " id="header">
+            {# <img src="{{ asset('images/aurora.png') }}" class="logo" alt="" width="170px" height="60px"/> #}
+
+            <div>
+                <ul style=" font-size: 36px; margin-left:300px;" id="navbar">
+                
+                        <li><i class="fa-solid fa-house"></i><a style="color: azure;" class="active" href="{{ path('app_student_index') }}">Home</a></li>
+                        <li><i class="fa-solid fa-list"></i><a style="color: azure;" href="{{ path('app_student_index') }}">Teacher List</a></li>
+<li><i class="fa-solid fa-gauge"></i><a style="color: azure;" href="#">Dashboard</a></li>
+<li><i class="fa-solid fa-calendar-days"></i><a style="color: azure;" href="#">Events</a></li>
+<li><i class="fa-solid fa-briefcase"></i><a style="color: azure;" href="#">My courses</a></li>
+                       
+                        
+                    {% if app.user %}
+                        {# <li class="nav-item"><a class="nav-link">Hello {{ app.user.FullName }}</a></li> #}
+                        {# <li><a class="active" href="{{ path('app_review_cart') }}"><img src="{{ asset('images/cart.png') }}" width="30px" height="30px" /></a></li> #}
+                    {% endif %}
+                    
+                </ul>
+            </div>
+        </section>     
+    </body>
+
+</html>
+    
+    
+    
+    
+    
+    

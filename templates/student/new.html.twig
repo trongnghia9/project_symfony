@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Teacher{% endblock %}
+
+{% block body %}
+    <div style="margin-left:600px;";><h1>Create new Teacher</h1>
+
+    {{ include('student/_form.html.twig') }}
+
+    <a style="margin-left:5px; height: px;
+width: 10px; "; href="{{ path('app_student_index') }}">Go Back</a></div>
+    <iframe style="margin-top:50px; margin-left:; width:100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.6772673846613!2d108.2333621750049!3d16.0822286845991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421827a3c439f5%3A0xdec2fb897aa16a90!2sGreenwich%20Vi%E1%BB%87t%20Nam!5e0!3m2!1sen!2s!4v1686711914656!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+{% endblock %}
